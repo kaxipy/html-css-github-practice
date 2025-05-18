@@ -1,24 +1,65 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub Practice</title>
+  <meta charset="UTF-8">
+  <title>User Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    .card h2 {
+      text-align: center;
+      color: #333;
+    }
+    .info {
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+    .info strong {
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <link rel="stylesheet" href="style.css">
-    <section class="hero">
-    <h1>Welcome to My Site</h1>
-    <p>This is a practice project using GitHub Desktop.</p>
-    </section>
-    <nav class="navbar">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    </nav>
-    <section class="hero">...</section>
-    <footer class="footer">
-    <p>© 2025 My Website</p>
-</footer>
+
+<div class="card">
+  <h2>User Info</h2>
+  <div class="info" id="userInfo"></div>
+</div>
+
+<script>
+  const user = {
+    name: "Kakhi",
+    surname: "Qajaia",
+    age: 14,
+    email: "Tester@gmail.com",
+    password: "12345678",
+    phone: "555-555-555"
+  };
+
+  const userInfoDiv = document.getElementById("userInfo");
+
+  userInfoDiv.innerHTML = `
+    <p><strong>Name:</strong> ${user.name}</p>
+    <p><strong>Surname:</strong> ${user.surname}</p>
+    <p><strong>Age:</strong> ${user.age}</p>
+    <p><strong>Email:</strong> ${user.email}</p>
+    <p><strong>Password:</strong> ${user.password}</p>
+    <p><strong>Phone:</strong> ${user.phone}</p>
+  `;
+</script>
+
 </body>
 </html>
